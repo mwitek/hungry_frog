@@ -11,9 +11,10 @@ public class FlyPickup : MonoBehaviour {
 		if (other.CompareTag ("Player")) {
 			// add particle effect
 			Instantiate(pickupPrefab, transform.position, Quaternion.identity);
-
-			Destroy (gameObject);
+			ScoreCounter.score++;
 			FlySpawner.totalFlies--;
+			Destroy (gameObject);
+
 		}
 	}
 }
