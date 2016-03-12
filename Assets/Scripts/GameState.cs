@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour {
+
 	private bool gameStarted = false;
 
 	[SerializeField]
@@ -82,7 +83,6 @@ public class GameState : MonoBehaviour {
 
 		// Allow the camera to move
 		followCamera.enabled = true;
-
 	}
 
 	private void EndGame() {

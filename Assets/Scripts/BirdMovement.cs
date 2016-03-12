@@ -8,6 +8,9 @@ public class BirdMovement : MonoBehaviour {
 	private NavMeshAgent birdAgent;
 	private Animator birdAnimator;
 
+	[SerializeField]
+	private RandomSoundPlayer birdFootsteps;
+
 	// Use this for initialization
 	void Start () {
 		birdAgent = GetComponent<NavMeshAgent> ();
@@ -24,6 +27,14 @@ public class BirdMovement : MonoBehaviour {
 
 		// Pass vilocity to animator
 		birdAnimator.SetFloat ("Speed", speed);
+
+		//play footsteps if bird is moving
+
+		if (speed > 0f) {
+			birdFootsteps.enabled = true;
+		} else {
+			birdFootsteps.enabled = false;
+		}
 
 	}
 }

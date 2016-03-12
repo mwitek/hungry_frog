@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour {
 	private float turningSpeed = 20f;
 	private Rigidbody playerRigidbody;
 
+	[SerializeField]
+	private RandomSoundPlayer playerFootsteps;
+
 	// Use this for initialization
 	void Start () {
 		// Getting components and assigning it to a vars.
@@ -39,8 +42,10 @@ public class PlayerMovement : MonoBehaviour {
 			Quaternion newRotation = Quaternion.Lerp (playerRigidbody.rotation, targetRotation, turningSpeed * Time.deltaTime);
 			playerRigidbody.MoveRotation (newRotation);
 			playerAnimator.SetFloat ("Speed", 3f);
+			playerFootsteps.enabled = true;
 		} else {
 			playerAnimator.SetFloat ("Speed", 0f);
+			playerFootsteps.enabled = false;
 		}
 	}
 
