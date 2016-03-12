@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BridMovement : MonoBehaviour {
+public class BirdMovement : MonoBehaviour {
 
 	[SerializeField]
 	private Transform target;
@@ -13,7 +13,7 @@ public class BridMovement : MonoBehaviour {
 		birdAgent = GetComponent<NavMeshAgent> ();
 		birdAnimator = GetComponent<Animator> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		// set bird desitation
@@ -23,7 +23,7 @@ public class BridMovement : MonoBehaviour {
 		float speed = birdAgent.velocity.magnitude;
 
 		// Pass vilocity to animator
-
 		birdAnimator.SetFloat ("Speed", speed);
+
 	}
 }
