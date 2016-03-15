@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 	private float moveHotizontal;
 	private float moveVertical;
 	private Vector3 movement;
-	private float turningSpeed = 20f;
+	private float turningSpeed = 3f;
 	private Rigidbody playerRigidbody;
 
 	[SerializeField]

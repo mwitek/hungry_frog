@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: acedadb96bd30493bbef94dda288b0cb
-timeCreated: 1457241492
+timeCreated: 1458019672
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pickupPrefab: {fileID: 131256, guid: e2fa036f4ff1c44778c8f759efd67b48, type: 2}
+  - enemy: {fileID: 166180, guid: 73a503d9e088c6c4091c6852c7de9625, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
